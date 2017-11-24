@@ -1,0 +1,114 @@
+name: ovo-workshop
+synopsis: OVO Haskell Workshop
+description: OVO Haskell Workshop
+category: Other
+version: '0.0.0'
+
+maintainer: Nigel Anthony Rantor
+
+github: wiggly/ovo-workshop
+
+library:
+  dependencies:
+  - base
+  - containers
+  source-dirs: lib
+
+executables:
+  workshop:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Workshop.hs
+    source-dirs: app
+  lazy:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Lazy.hs
+    source-dirs: app
+  pure:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Pure.hs
+    source-dirs: app
+  composer:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Composer.hs
+    source-dirs: app
+  loop:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Loop.hs
+    source-dirs: app
+  list:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: List.hs
+    source-dirs: app
+  anagram:
+    dependencies:
+    - base
+    - ovo-workshop
+    - containers
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Anagram.hs
+    source-dirs: app
+
+tests:
+  spec:
+    dependencies:
+    - base
+    - ovo-workshop
+    - hspec
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Spec.hs
+    source-dirs: spec
+
+ghc-options: -Wall
+
+extra-source-files:
+- package.yaml
+- README.md
+- stack.yaml
